@@ -1,0 +1,7 @@
+apiVersion: demo.my.domain/v1
+kind: CustomPodSet
+metadata:
+  name: custompodset-sample
+spec:
+  # Add fields here
+  foo: bar

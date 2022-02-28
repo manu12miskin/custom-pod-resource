@@ -1,0 +1,24 @@
+# permissions for end users to edit custompodsets.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: custompodset-editor-role
+rules:
+- apiGroups:
+  - demo.my.domain
+  resources:
+  - custompodsets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - demo.my.domain
+  resources:
+  - custompodsets/status
+  verbs:
+  - get
